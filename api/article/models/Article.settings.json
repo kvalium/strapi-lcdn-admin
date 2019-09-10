@@ -1,0 +1,28 @@
+{
+  "connection": "default",
+  "collectionName": "articles",
+  "info": {
+    "name": "article",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "Titre": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "Texte": {
+      "type": "richtext"
+    },
+    "Galerie": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload"
+    }
+  }
+}
